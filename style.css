@@ -1,0 +1,269 @@
+/* Apply these styles to all elements */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+}
+
+/* ===== DEFAULT PAGE STYLE (for dashboards, admin, etc.) ===== */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); /* Subtle gradient background */
+  display: block;              /* IMPORTANT: do NOT center everything */
+}
+
+/* ===== LOGIN PAGE ONLY ===== */
+body.login-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Vibrant gradient */
+  display: block;
+}
+
+/* Container that holds the login card */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* The main login card box */
+.login-card {
+  width: 380px; /* Slightly wider */
+  background: rgba(255,255,255,0.95);
+  padding: 40px 30px; /* More padding */
+  border-radius: 20px; /* More rounded */
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3); /* Deeper shadow */
+  text-align: center;
+  backdrop-filter: blur(10px); /* Glass effect */
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Style for the login title text */
+.login-title {
+  font-size: 28px; /* Larger */
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Style for the icon inside the title */
+.login-title i {
+  color: #667eea; /* Gradient color */
+  margin-right: 8px;
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Style for input fields */
+input {
+  width: 100%;
+  padding: 14px 16px; /* More padding */
+  border-radius: 12px; /* More rounded */
+  border: 2px solid #e5e7eb;
+  margin-top: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Style when input is focused */
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102,126,234,0.2); /* Glow effect */
+}
+
+/* Style for the login button */
+.login-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+}
+
+/* Forgot password */
+.forgot-password {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.forgot-password a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  color: #6b7280;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d1d5db, transparent);
+}
+
+/* Social icon buttons */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.social-buttons .btn {
+  width: 50px;
+  height: 50px; /* Larger */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-buttons .btn:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn.facebook { background: linear-gradient(135deg, #1877f2, #42a5f5); }
+.btn.google { background: linear-gradient(135deg, #ea4335, #ff7043); }
+.btn.x { background: linear-gradient(135deg, #000, #333); color:#fff; }
+.btn.whatsapp { background: linear-gradient(135deg, #25d366, #4caf50); }
+
+/* Alerts */
+.alert {
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  font-weight: 600;
+  border-left: 4px solid;
+}
+
+.success { 
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0); 
+  color: #065f46; 
+  border-left-color: #10b981;
+}
+.error { 
+  background: linear-gradient(135deg, #fee2e2, #fecaca); 
+  color: #991b1b; 
+  border-left-color: #ef4444;
+}
+
+/* Secondary buttons */
+.secondary-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+  color: #1f2933;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.secondary-btn:hover {
+  background: linear-gradient(135deg, #d1d5db, #9ca3af);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+body.login-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: block;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-logo img {
+  width: 140px; /* Larger */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== FIX LOGIN LAYOUT ===== */
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.login-image {
+  width: 50%;
+  background: url('bakgrawnd.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.login-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4); /* Overlay for text readability */
+}
+
+.login-image > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+}
